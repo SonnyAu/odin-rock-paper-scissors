@@ -1,0 +1,58 @@
+<script>
+    // Computer chooses a number from 0-3
+    // 0 = Rock, 1 = Paper, 2 = Scissors
+    function getComputerChoice() {
+        let randNum = Math.floor(Math.random() * 3);
+        console.log(randNum);
+        return randNum;
+    }
+    // take and set to a variable userInput
+    let userInput = +(prompt("Choose 0 for rock, 1 for paper, 2 for scissors"));
+    // get and set getComputerChoice to a variable
+    let computerChoice = +getComputerChoice();
+
+    // write function declaration for playRound()
+    function playRound(playerSelection, computerSelection) {
+        // write parameters as playerSelection, computerSelection
+        // compare the parameters
+        // if playerSelection is 0, 1, or 2:
+            // playerSelection is Rock
+            if (playerSelection == 0 ) {
+                // computerSelection is Paper
+                if (computerSelection === 1){
+                    return "Computer won.";
+                } else if (computerSelection === 2){
+                    return "You won!";
+                } else {
+                    return "It's a tie.";
+                }
+            // playerSelection is Paper
+            } else if (playerSelection == 1){
+                if (computerSelection === 0){
+                    return "You won!";
+                } else if (computerSelection === 2){
+                    return "Computer won.";
+                } else {
+                    return "It's a tie.";
+                }
+            // playerSelection is Scissors
+            } else if (playerSelection === 2){
+                if (computerSelection === 0){
+                    return "Computer won.";
+                } else if (computerSelection === 1){
+                    return "You won!";
+                } else {
+                    return "It's a tie.";
+                }
+            } else {
+                return "Not a valid value.";
+            }
+        // return who won
+    }
+    console.log(playRound(userInput, computerChoice));
+
+    // write game() function that plays 5 rounds and keeps score
+    
+
+
+</script>
