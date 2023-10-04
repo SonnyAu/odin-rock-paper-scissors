@@ -1,0 +1,1 @@
+This simple javascript program is intended to be Rock Paper Scissors. It's not anything major, just practice.

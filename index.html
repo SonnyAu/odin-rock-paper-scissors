@@ -7,40 +7,42 @@
         return randNum;
     }
     // take and set to a variable userInput
-    let userInput = +(prompt("Choose 0 for rock, 1 for paper, 2 for scissors"));
+    let userInput = prompt("Choose rock, paper, or scissors");
     // get and set getComputerChoice to a variable
     let computerChoice = +getComputerChoice();
 
     // write function declaration for playRound()
     function playRound(playerSelection, computerSelection) {
         // write parameters as playerSelection, computerSelection
+        let player = playerSelection.toUpperCase();
         // compare the parameters
-        // if playerSelection is 0, 1, or 2:
             // playerSelection is Rock
-            if (playerSelection == 0 ) {
+            if (player === "ROCK" ) {
                 // computerSelection is Paper
                 if (computerSelection === 1){
-                    return "Computer won.";
+                    return "You lose! Paper beats rock!";
+                // computerSelection is Scissors
                 } else if (computerSelection === 2){
-                    return "You won!";
+                    return "You win! Rock beats scissors!";
+                    computer = "Scissors";
                 } else {
-                    return "It's a tie.";
+                    return "It'a tie!";
                 }
             // playerSelection is Paper
-            } else if (playerSelection == 1){
+            } else if (player === "PAPER"){
                 if (computerSelection === 0){
-                    return "You won!";
+                    return "You win! Paper beats rock!";
                 } else if (computerSelection === 2){
-                    return "Computer won.";
+                    return "You lose! Scissors beats rock!";
                 } else {
                     return "It's a tie.";
                 }
             // playerSelection is Scissors
-            } else if (playerSelection === 2){
+            } else if (player === "SCISSORS"){
                 if (computerSelection === 0){
-                    return "Computer won.";
+                    return "You lost! Rock beats scissors!";
                 } else if (computerSelection === 1){
-                    return "You won!";
+                    return "You won! Scissors beats paper!";
                 } else {
                     return "It's a tie.";
                 }
@@ -52,7 +54,9 @@
     console.log(playRound(userInput, computerChoice));
 
     // write game() function that plays 5 rounds and keeps score
-    
+    function game() {
+        
+    }
 
 
 </script>
